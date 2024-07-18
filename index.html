@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<bod>
+
+    <div id="screenLoad" class="justify-content-center align-items-center">
+        <span class="loader"></span>
+    </div>
+
+    <div id="particles-js" class="position-relative">
+        <div id="colorPicker" class="rounded bg-white z-3 position-fixed py-1 px-2">
+            <div class="colors">
+                <h4>Pick the Color :</h4>
+                <span class="d-inline-block rounded"></span>
+                <span class="d-inline-block rounded"></span>
+                <span class="d-inline-block rounded"></span>
+                <span class="d-inline-block rounded"></span>
+                <span class="d-inline-block rounded"></span>
+                <span class="d-inline-block rounded"></span>
+            </div>
+            <i class="fa-solid fa-gear text-white position-absolute top-0 rounded"></i>
+            <i class="fa-solid fa-xmark text-white position-absolute top-0 rounded"></i>
+        </div>
+        <div class="content w-100 position-absolute">
+            <h1 class="text-white animate__animated animate__bounceInDown text-center">Job Fair Task</h1>
+            <div
+                class="inputs m-auto  w-50 animate__animated animate__backInRight animate__delay-2s position-relative  d-flex mt-5">
+                <input type="text" class="form-control" onkeyup="search(this.value)" id="inputSearchByName"
+                    placeholder="Search by Customer Name">
+                <label for="inputSearchByName" id="icon1" class="position-relative"><i
+                        class="fa-solid fa-magnifying-glass"></i></label>
+            </div>
+            <button
+                class="btn text-white position-relative mt-4 animate__animated animate__backInRight animate__delay-2s "
+                id="btnReset">Reset</button>
+            <div class="container animate__animated animate__backInRight animate__delay-3s">
+                <div class="row d-flex bg-transparent">
+                    <div class="col-md-7">
+                        <table class="rounded-circle table table-striped table-hover shadow-lg">
+                            <thead class="text-bg-primary">
+                                <tr>
+                                    <th scope="col" class="text-center">Index</th>
+                                    <th scope="col" class="text-center">CustomerName</th>
+                                    <th scope="col" class="text-center">Transaction Dates</th>
+                                    <th scope="col" class="text-center">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="displayContainer">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-5">
+                        <h2 class="text-center text-white" id="hiddenTitle">Choose Customer to appear the Chart of his
+                            data</h2>
+                        <div class="chart">
+                            <canvas id="myChart" class="h-100 text-white"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</bod>
+
+</html>
